@@ -25,6 +25,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'felixhummel/setcolors.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rustfmt'
 
 call plug#end()
 
@@ -40,6 +42,13 @@ set guioptions=T        " Enable the toolbar
 colorscheme sean
 set showcmd
 set background=dark     " Dark background
+
+" -- Splits
+"  Use ctrl-[hjkl] to select the active split
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 " -- Search
 set ignorecase          " Ignore case when searching
@@ -59,6 +68,7 @@ set wildmenu            " Enable command completion
 " -- Editing convenience
 filetype indent plugin on
 syntax on
+syntax enable
 set autoindent
 set backspace=indent,eol,start
 set hidden
@@ -72,6 +82,22 @@ set mouse=a
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" -- RUST
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " -- NERDTree
 " Close vim if only NERDTree is open
@@ -104,7 +130,8 @@ let g:limelight_conceal_guifg = '#777777'
 let g:limelight_default_coefficient = 0.7
 
 " -- Airline
-let g:airline_theme='ayu_dark'
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts = 1
 
 " -- Key bindings
 " ctrl-L to clear search

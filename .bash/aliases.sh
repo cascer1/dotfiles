@@ -3,7 +3,6 @@ alias ..='cd ../'
 alias cls='clear; ls'
 alias hacker='dmesg | pv -qL 64'
 alias removegps='exiftool -gps:all= -xmp:geotag= -m'
-alias removetimestamp="sed -r 's/\[[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}\s[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}\]//g' -i --"
 alias tohex='printf "%x\n"'
 alias hextime='tohex $(date +%s)'
 alias usernames='apg -a 0 -m 6 -x 6 -n 40 -M L'
