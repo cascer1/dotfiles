@@ -20,3 +20,7 @@
 	defaultBranch = main
 [core]
 	editor = vim
+[maintenance]
+#	repo = /home/cas/git/AndroidAPS
+[rerere]
+	enabled = true
