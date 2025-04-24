@@ -9,6 +9,6 @@ alias compresspdf='gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias ls='exa'
-alias ll='exa --long --header'
-alias lsa='exa --long --header --all'
+alias ls='eza --icons=auto'
+alias ll='eza --long --header --icons=auto'
+alias lsa='eza --long --header --all --icons=auto'

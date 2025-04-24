@@ -16,7 +16,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-" Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-commentary'
@@ -140,6 +139,8 @@ nnoremap <C-L> :nohl<CR><C-L>
 map Y y$
 " Open NERDTree file explorer
 map <C-n> :NERDTreeToggle<CR>
+" Toggle Goyo
+map <C-g> :Goyo<CR>
 
 " -- True color support
 "Credit joshdick
