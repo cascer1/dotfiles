@@ -26,6 +26,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'felixhummel/setcolors.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'rust-lang/rustfmt'
+Plug 'justinmk/vim-sneak'
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
 
@@ -40,7 +42,6 @@ set scrolloff=3         " Display at least 3 lines around cursor
 set guioptions=T        " Enable the toolbar
 colorscheme sean
 set showcmd
-set background=dark     " Dark background
 
 " -- Splits
 "  Use ctrl-[hjkl] to select the active split
