@@ -1,5 +1,5 @@
 alias ..='cd ../'
-alias cls='clear; exa --long --header'
+alias cls='clear; eza --long --header'
 alias hacker='dmesg | pv -qL 64'
 alias removegps='exiftool -gps:all= -xmp:geotag= -m'
 alias tohex='printf "%x\n"'
@@ -9,6 +9,8 @@ alias compresspdf='gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias ls='exa'
-alias ll='exa --long --header'
-alias lsa='exa --long --header --all'
+alias ls='eza --icons=auto'
+alias ll='eza --long --header --icons=auto'
+alias lsa='eza --long --header --all --icons=auto'
+
+alias cd='z'
