@@ -16,7 +16,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-" Plug 'morhetz/gruvbox'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-commentary'
@@ -27,6 +26,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'felixhummel/setcolors.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'rust-lang/rustfmt'
+Plug 'justinmk/vim-sneak'
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
 
@@ -41,7 +42,6 @@ set scrolloff=3         " Display at least 3 lines around cursor
 set guioptions=T        " Enable the toolbar
 colorscheme sean
 set showcmd
-set background=dark     " Dark background
 
 " -- Splits
 "  Use ctrl-[hjkl] to select the active split
@@ -140,6 +140,8 @@ nnoremap <C-L> :nohl<CR><C-L>
 map Y y$
 " Open NERDTree file explorer
 map <C-n> :NERDTreeToggle<CR>
+" Toggle Goyo
+map <C-g> :Goyo<CR>
 
 " -- True color support
 "Credit joshdick
