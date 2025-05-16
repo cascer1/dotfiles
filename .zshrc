@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # Enable arrow keys in autocomplete
 zstyle ':completion:*' menu select
 
+eval "$(starship init zsh)"
 
 # Variables
 export PATH=/home/cas/.local/share/JetBrains/Toolbox/scripts:$PATH
