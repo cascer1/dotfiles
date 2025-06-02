@@ -87,6 +87,7 @@ nnoremap ,l :action StepInto<CR>
 nnoremap ,b :action CompileDirty<CR>
 vnoremap ,e :action EvaluateExpression<CR>
 nnoremap ,e :action EvaluateExpression<CR>
+nnoremap <leader>, :action RunAnything<CR>
 
 " Git windows
 map <leader>gc <Action>(CheckinProject)

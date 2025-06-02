@@ -24,3 +24,5 @@
 #	repo = /home/cas/git/AndroidAPS
 [rerere]
 	enabled = true
+[advice]
+	addIgnoredFile = false
