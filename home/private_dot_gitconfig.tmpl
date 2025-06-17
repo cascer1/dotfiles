@@ -1,14 +1,19 @@
 [gpg]
-	format = ssh
+    format = ssh
 [gpg "ssh"]
-	program = /opt/1Password/op-ssh-sign
-	allowedSignersFile = /home/cas/.config/git/allowed_signers
+{{ if eq .chezmoi.os "linux" }}
+    program = /opt/1Password/op-ssh-sign
+    allowedSignersFile = /home/cas/.config/git/allowed_signers
+{{ else if eq .chezmoi.os "windows" }}
+    program = "C:/Program Files/1Password/app/8/op-ssh-sign.exe"
+    allowedSignersFile = ~/allowed_signers
+{{ end }}
 [commit]
-	gpgsign = true
+    gpgsign = true
 [user]
-	name = Cas Eliëns
-	email = git@cascer1.space
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMtAlUtuRKXkNrdRFXkkIhyGnvL0JDOguGrS1zSd0yEX
+    name = {{- .user.name }}
+    email = {{- .user.gitEmail }}
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMtAlUtuRKXkNrdRFXkkIhyGnvL0JDOguGrS1zSd0yEX
 [merge]
     ff = no
 [pull]
@@ -17,12 +22,10 @@
     autoSetupRemote = true
     recurseSubmodules = on-demand
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [core]
-	editor = vim
-[maintenance]
-#	repo = /home/cas/git/AndroidAPS
+    editor = vim
 [rerere]
-	enabled = true
+    enabled = true
 [advice]
-	addIgnoredFile = false
+    addIgnoredFile = false
