@@ -1,0 +1,17 @@
+{{- $email := promptStringOnce . "user.email" "What is your email address" -}}
+{{- $chassisType := "desktop" }}
+{{- if eq .chezmoi.os "linux" }}
+{{-   $chassisType = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
+{{- else if eq .chezmoi.os "windows" }}
+{{-   $chassisType = "desktop" }}
+{{- end }}
+[data.user]
+    email = {{ $email | quote }}
+    name = "Cas Eliëns"
+
+[data.system]
+    chassisType = {{- $chassisType | quote }}
+
+[git]
+    autoCommit = true
+    autoPush = true
