@@ -115,6 +115,7 @@ source ~/.zsh/private.sh
 
 export PATH=/home/cas/bin:$PATH
 export PATH=/home/cas/.local/bin:$PATH
+export PATH=/home/cas/.cargo/bin:%PATH
 
 PATH="/home/cas/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/cas/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
