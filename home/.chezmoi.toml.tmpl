@@ -1,4 +1,5 @@
 {{- $email := promptStringOnce . "user.email" "What is your email address" -}}
+{{- $gitEmail := promptStringOnce . "user.gitEmail" "What is your Git email address" -}}
 {{- $chassisType := "desktop" }}
 {{- if eq .chezmoi.os "linux" }}
 {{-   $chassisType = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
@@ -7,6 +8,7 @@
 {{- end }}
 [data.user]
     email = {{ $email | quote }}
+    gitEmail = {{ $gitEmail | quote }}
     name = "Cas Eliëns"
 
 [data.system]
