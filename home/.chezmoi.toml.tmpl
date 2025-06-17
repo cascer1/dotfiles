@@ -6,6 +6,13 @@
 {{- else if eq .chezmoi.os "windows" }}
 {{-   $chassisType = "desktop" }}
 {{- end }}
+{{- $is_wsl := false -}}
+{{- if and .chezmoi.kernel (hasKey .chezmoi.kernel "osrelease") -}}
+{{-   $is_wsl = (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+{{- end -}}
+{{- if $is_wsl }}
+{{-   $chassisType = "wsl" }}
+{{- end -}}
 [data.user]
     email = {{ $email | quote }}
     gitEmail = {{ $gitEmail | quote }}
