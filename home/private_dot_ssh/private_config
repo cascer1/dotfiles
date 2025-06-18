@@ -8,4 +8,4 @@ Host github
 Host github.com
     User git
 
-Include hosts_config
+Include config.d/*
