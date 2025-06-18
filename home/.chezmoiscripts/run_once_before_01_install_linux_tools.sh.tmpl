@@ -1,0 +1,12 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+{{- if ne .chezmoi.arch "arm64" }}
+cargo install eza
+{{- end }}
+
+{{- if eq .chezmoi.osRelease.id "fedora" }}
+sudo dnf install zoxide
+{{- end }}
+
+{{ end -}}
