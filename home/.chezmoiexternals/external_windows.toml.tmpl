@@ -1,0 +1,7 @@
+{{- if eq .chezmoi.os "windows" }}
+["vimfiles/autoload/plug.vim"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    exact = true
+    refreshPeriod = "2160h" # 90 days
+{{- end }}
