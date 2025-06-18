@@ -7,7 +7,6 @@ Include 1Password/config
 Host *
     ServerAliveInterval 240
 {{- if stat "~/.1Password/agent.sock" }}
-/* {{- if and (eq .chezmoi.os "linux") (eq .system.chassisType "desktop") }} */
     IdentityAgent ~/.1password/agent.sock
 {{- end }}
 
