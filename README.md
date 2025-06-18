@@ -30,8 +30,3 @@ chsh -s $(which zsh)
 chezmoi update
 ```
 
-## Editing encrypted files
-
-```bash
-bin/edit-age-encrypted-in-vscode.sh home/.data/chezmoidata.yaml.age
-```
