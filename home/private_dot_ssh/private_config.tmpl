@@ -6,7 +6,7 @@ Include 1Password/config
 
 Host *
     ServerAliveInterval 240
-{{- if stat "~/.1Password/agent.sock" }}
+{{- if stat (joinPath .chezmoi.homeDir ".1password/agent.sock") }}
     IdentityAgent ~/.1password/agent.sock
 {{- end }}
 
