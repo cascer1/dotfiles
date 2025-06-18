@@ -1,3 +1,5 @@
+# Include additional scripts
+
 {{- if stat (joinPath .chezmoi.homeDir ".config/op/plugins.sh") }}
 source /home/cas/.config/op/plugins.sh
 {{- end }}
