@@ -1,7 +1,7 @@
 Include config.d/config_*
 
 {{- if stat (joinPath .chezmoi.homeDir ".ssh/1Password/config") }}
-Include 1Password/config
+#Include 1Password/config
 {{- end }}
 
 Host *

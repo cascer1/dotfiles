@@ -9,14 +9,14 @@
     allowedSignersFile = ~/.config/git/allowed_signers
 {{- else if eq .chezmoi.os "windows" }}
     program = "C:/Program Files/1Password/app/8/op-ssh-sign.exe"
-    allowedSignersFile = ~/allowed_signers
+    allowedSignersFile = ~/.config/git/allowed_signers
 {{- end }}
 [commit]
     gpgsign = true
 [user]
     name = {{- .user.name }}
     email = {{- .user.gitEmail }}
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMtAlUtuRKXkNrdRFXkkIhyGnvL0JDOguGrS1zSd0yEX
+    signingkey = {{- .user.signingKey }}
 [merge]
     ff = no
 [pull]
@@ -28,11 +28,13 @@
     defaultBranch = main
 [core]
     editor = vim
+{{- if eq .system.wsl true}}
+    sshCommand = ssh.exe
+{{- else if eq .chezmoi.os "windows" }}
+    sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+{{- end }}
 [rerere]
     enabled = true
 [advice]
     addIgnoredFile = false
-{{- if eq .system.wsl true}}
-[core]
-    sshCommand = ssh.exe
-{{- end }}
+
