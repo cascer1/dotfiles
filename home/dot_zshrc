@@ -111,7 +111,8 @@ eval "$(zoxide init zsh)"
 export PATH=/home/cas/.local/share/JetBrains/Toolbox/scripts:$PATH
 
 source ~/.zsh/aliases.sh
-source ~/.zsh/private.sh
+source ~/.zsh/includes.sh
+source ~/.zsh/path.sh
 
 export PATH=/home/cas/bin:$PATH
 export PATH=/home/cas/.local/bin:$PATH

@@ -1,5 +1,0 @@
-export FLYCTL_INSTALL="/home/cas/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-{{- if (and (eq .chezmoi.os "linux") (ne .system.wsl true) ) }}
-source /home/cas/.config/op/plugins.sh
-{{- end }}

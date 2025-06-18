@@ -1,0 +1,24 @@
+{{- if stat (joinPath .chezmoi.homeDir ".local/share/JetBrains/Toolbox/scripts") }}
+export PATH=/home/cas/.local/share/JetBrains/Toolbox/scripts:$PATH
+{{- end }}
+{{- if stat (joinPath .chezmoi.homeDir "bin") }}
+export PATH=/home/cas/bin:$PATH
+{{- end }}
+{{- if stat (joinPath .chezmoi.homeDir ".local/bin") }}
+export PATH=/home/cas/.local/bin:$PATH
+{{- end }}
+{{- if stat (joinPath .chezmoi.homeDir ".cargo/bin") }}
+export PATH=/home/cas/.cargo/bin:$PATH
+{{- end }}
+{{- if stat (joinPath .chezmoi.homeDir ".fly") }}
+export FLYCTL_INSTALL="/home/cas/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+{{- end }}
+
+{{- if stat (joinPath .chezmoi.homeDir "perl5") }}
+PATH="/home/cas/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/cas/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/cas/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/cas/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/cas/perl5"; export PERL_MM_OPT;
+{{- end }}
