@@ -1,5 +1,9 @@
 Include config.d/*
 
+{{- if eq .chezmoi.os "windows" }}
+Include 1Password/*
+{{- end -}}
+
 Host *
     ServerAliveInterval 240
 {{- if and (eq .chezmoi.os "linux") (eq .system.chassisType "desktop") }}
