@@ -1,15 +1,13 @@
 [gpg]
     format = ssh
 [gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
 {{- if .system.wsl }}
     program = "/mnt/c/Program Files/1Password/app/8/op-ssh-sign-wsl"
-    allowedSignersfile = ~/.config/git/allowed_signers
-{{- else if eq .chezmoi.os "linux" }}
+{{- else if and (eq .chezmoi.os "linux") (eq .system.chassisType "desktop") }}
     program = /opt/1Password/op-ssh-sign
-    allowedSignersFile = ~/.config/git/allowed_signers
 {{- else if eq .chezmoi.os "windows" }}
     program = "C:/Program Files/1Password/app/8/op-ssh-sign.exe"
-    allowedSignersFile = ~/.config/git/allowed_signers
 {{- end }}
 [commit]
     gpgsign = true
