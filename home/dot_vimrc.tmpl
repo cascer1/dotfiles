@@ -1,7 +1,7 @@
 " VIM Configuration - Cas Eliëns
 " ---
 
-{{- if (and (eq .chezmoi.os "linux") (ne .system.wsl true) ) }}
+{{- if eq .chezmoi.os "linux" }}
 " Install vim-plug if it is not yet installed
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
