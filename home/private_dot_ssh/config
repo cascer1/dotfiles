@@ -1,0 +1,26 @@
+Host *
+    IdentityAgent ~/.1password/agent.sock
+
+Host nas
+    Hostname nas.eliens.co
+    User root
+
+Host router
+    Hostname 172.20.10.1
+    User cas
+
+Host github
+    Hostname github.com
+    User git
+
+Host github.com
+    User git
+
+Host assistant
+    Hostname 172.20.20.69
+    User root
+
+Host proxy
+    Hostname proxy.vobar.eu
+    ForwardAgent yes
+    User cas
