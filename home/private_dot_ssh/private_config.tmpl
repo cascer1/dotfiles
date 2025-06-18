@@ -1,6 +1,6 @@
 Include config.d/config_*
 
-{{- if eq .chezmoi.os "windows" }}
+{{- if stat (joinPath .chezmoi.homeDir ".ssh/1Password/config") }}
 Include 1Password/config
 {{- end }}
 
