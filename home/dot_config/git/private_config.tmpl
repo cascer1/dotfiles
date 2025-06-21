@@ -26,6 +26,8 @@
     defaultBranch = main
 [core]
     editor = vim
+    eol = lf
+    autocrlf = input
 {{- if eq .system.wsl true}}
     sshCommand = ssh.exe
 {{- else if eq .chezmoi.os "windows" }}
