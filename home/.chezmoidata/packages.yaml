@@ -5,6 +5,7 @@ packages:
         - 'bat'
         - 'zsh'
         - 'zoxide'
+        - 'gcc cmake make glibc-devel'
     amd64:
       cargo:
         - 'eza'

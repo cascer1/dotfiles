@@ -3,7 +3,7 @@
 
 {{ if eq .chezmoi.osRelease.id "fedora" }}
 {{range .packages.fedora.all.dnf -}}
-sudo dnf -y install {{.}}
+sudo dnf -y --quiet install {{.}}
 {{ end -}}
 
 {{- if eq .chezmoi.arch "amd64" }}
