@@ -5,5 +5,18 @@
     exact = true
     refreshPeriod = "2160h" # 90 days
 
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archie/master.tar.gz"
+    exact = true
+    tripComponents = 1
+    refreshPeriod = "168h"
+
+[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+    type = "archive"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
 
 {{- end }}
