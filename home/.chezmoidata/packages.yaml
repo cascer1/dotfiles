@@ -1,0 +1,5 @@
+packages:
+  fedora:
+    dnf:
+      - 'bat'
+      - 'zsh'
