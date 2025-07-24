@@ -1,0 +1,15 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+{{ if eq .chezmoi.osRelease.id "fedora" }}
+{{range .packages.fedora.all.dnf -}}
+sudo dnf -y install {{.}}
+{{ end -}}
+
+{{- if eq .chezmoi.arch "amd64" }}
+{{range .packages.fedora.amd64.cargo -}}
+cargo install {{.}}
+{{ end -}}
+{{ end }}
+{{- end }}
+{{- end }}

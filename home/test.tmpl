@@ -1,9 +1,0 @@
-{{ if eq .chezmoi.os "linux" -}}
-#!/bin/bash
-
-{{ if eq .chezmoi.osRelease.id "fedora" }}
-{{range .packages.fedora.dnf -}}
-dnf install {{. | quote }}
-{{ end -}}
-{{- end }}
-{{- end }}

@@ -1,5 +1,10 @@
 packages:
   fedora:
-    dnf:
-      - 'bat'
-      - 'zsh'
+    all:
+      dnf:
+        - 'bat'
+        - 'zsh'
+        - 'zoxide'
+    amd64:
+      cargo:
+        - 'eza'
