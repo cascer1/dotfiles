@@ -7,7 +7,7 @@
         "customType": "regex",
       "managerFilePatterns": ["^cargo.yaml$"],
       "matchStrings": [
-        "^(?<depName>\\w+)\\s*:\\s*(?<currentVersion>\\d+\\.\\d+\\.\\d+)"
+        "^(?<depName>\\w+)\\s*:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "cargo crate ${depName}",
       "datasourceTemplate": "crate"
