@@ -1,0 +1,17 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "assignees": ["cascer1"],
+    "rebaseWhen": "conflicted",
+  "customManagers": [
+    {
+      "manager": "cargo-versions",
+      "fileMatch": ["^cargo.yaml$"],
+      "matchStrings": [
+        "^(?<depName>\\w+)\\s*:\\s*(?<currentVersion>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "${depName}",
+      "datasourceTemplate": "crates.io"
+    }
+  ]
+}
+
