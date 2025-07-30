@@ -10,8 +10,7 @@
         "matchStrings": [
           ": \\s*\"*(?<currentValue>.*?)\"*\\s* #\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
         ],
-        "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}",
-        "extends": ["schedule:monthly"]
+        "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
   ]
 }
