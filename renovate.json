@@ -5,9 +5,9 @@
     "customManagers": [
       {
         "customType": "regex",
-        "managerFilePatterns": ["home/.chezmoidata/versions.yaml"],
+        "managerFilePatterns": ["/\\.yaml$/"],
         "matchStrings": [
-          "^\\s+(\\w+)\\s*:\\s*'(?<currentValue>[^'].+)'\\s* #\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
+          ": \\s*\"*(?<currentValue>.*?)\"*\\s* #\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
         ],
         "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
