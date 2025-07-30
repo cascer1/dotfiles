@@ -5,12 +5,11 @@
     "customManagers": [
       {
         "customType": "regex",
-        "managerFilePatterns": ["home/.chezmoidata/cargo.yaml"],
+        "managerFilePatterns": ["home/.chezmoidata/versions.yaml"],
         "matchStrings": [
-          "^\\s+(?<depName>\\w+)\\s*:\\s*'(?<currentValue>[^'].+)'"
+          "^\\s+(\\w+)\\s*:\\s*'(?<currentValue>[^'].+)'\\s* #\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
         ],
-        "depNameTemplate": "cargo crate ${depName}",
-        "datasourceTemplate": "crate"
+        "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
     }
   ]
 }

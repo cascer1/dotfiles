@@ -1,6 +1,0 @@
-packages:
-  fedora:
-    all:
-      eza: 'v0.20.0'
-      starship: 'v1.23.0'
-    amd64:
