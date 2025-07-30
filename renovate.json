@@ -5,7 +5,7 @@
     "customManagers": [
       {
         "customType": "regex",
-        "managerFilePatterns": ["cargo.yaml$"],
+        "managerFilePatterns": ["cargo.yaml"],
         "matchStrings": [
           "^(?<depName>\\w+)\\s*:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
         ],
