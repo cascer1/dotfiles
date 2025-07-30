@@ -3,9 +3,6 @@
     "assignees": ["cascer1"],
     "rebaseWhen": "conflicted",
     "extends": ["config:recommended", ":dependencyDashboard"],
-    "major": {
-        "dependencyDashboardApproval": true
-    },
     "customManagers": [
       {
         "customType": "regex",
@@ -13,7 +10,8 @@
         "matchStrings": [
           ": \\s*\"*(?<currentValue>.*?)\"*\\s* #\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
         ],
-        "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
+        "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}",
+        "extends": ["schedule:monthly"]
     }
   ]
 }
