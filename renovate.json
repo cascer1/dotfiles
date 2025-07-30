@@ -10,7 +10,7 @@
         "^(?<depName>\\w+)\\s*:\\s*(?<currentVersion>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "cargo crate ${depName}",
-      "datasourceTemplate": "crates.io"
+      "datasourceTemplate": "crate"
     }
   ]
 }
