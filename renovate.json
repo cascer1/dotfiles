@@ -3,6 +3,9 @@
     "assignees": ["cascer1"],
     "rebaseWhen": "conflicted",
     "extends": ["config:recommended", ":dependencyDashboard"],
+    "major": {
+        "dependencyDashboardApproval": true
+    },
     "customManagers": [
       {
         "customType": "regex",
