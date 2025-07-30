@@ -1,3 +1,3 @@
 versions:
-  eza: v0.20.0            # renovate: datasource=github-releases depName=eza-community/eza
+  eza: v0.23.0            # renovate: datasource=github-releases depName=eza-community/eza
   starship: v1.23.0       # renovate: datasource=github-releases depName=starship/starship
