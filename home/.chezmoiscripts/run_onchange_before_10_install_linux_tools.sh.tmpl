@@ -5,6 +5,9 @@
 {{range .packages.fedora.all.dnf -}}
 sudo dnf -y --quiet install {{.}}
 {{ end -}}
+
+curl https://sh.rustup.rs -sSf | sh
+
 {{range .packages.fedora.all.cargo -}}
 cargo install {{.}}
 {{ end -}}
