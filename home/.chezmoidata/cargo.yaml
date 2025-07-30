@@ -1,8 +1,6 @@
 packages:
   fedora:
     all:
-      cargo:
-        eza: 'v0.20.0'
-        starship: 'v1.23.0'
+      eza: 'v0.20.0'
+      starship: 'v1.23.0'
     amd64:
-      cargo:
