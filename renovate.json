@@ -5,9 +5,9 @@
     "customManagers": [
       {
         "customType": "regex",
-        "managerFilePatterns": ["cargo.yaml"],
+        "managerFilePatterns": ["home/.chezmoidata/cargo.yaml"],
         "matchStrings": [
-          "^(?<depName>\\w+)\\s*:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+          "^(?<depName>\\w+)\\s*:\\s*\"(?<currentValue>.+)\""
         ],
         "depNameTemplate": "cargo crate ${depName}",
         "datasourceTemplate": "crate"
