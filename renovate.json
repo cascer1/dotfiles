@@ -4,12 +4,12 @@
     "rebaseWhen": "conflicted",
   "customManagers": [
     {
-      "manager": "cargo-versions",
-      "fileMatch": ["^cargo.yaml$"],
+        "customType": "regex",
+      "managerFilePatterns": ["^cargo.yaml$"],
       "matchStrings": [
         "^(?<depName>\\w+)\\s*:\\s*(?<currentVersion>\\d+\\.\\d+\\.\\d+)"
       ],
-      "depNameTemplate": "${depName}",
+      "depNameTemplate": "cargo crate ${depName}",
       "datasourceTemplate": "crates.io"
     }
   ]
