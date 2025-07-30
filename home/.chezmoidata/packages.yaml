@@ -6,6 +6,8 @@ packages:
         - 'zsh'
         - 'zoxide'
         - 'gcc cmake make glibc-devel'
-    amd64:
       cargo:
         - 'eza'
+        - 'starship'
+    amd64:
+      cargo:

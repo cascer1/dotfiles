@@ -5,6 +5,9 @@
 {{range .packages.fedora.all.dnf -}}
 sudo dnf -y --quiet install {{.}}
 {{ end -}}
+{{range .packages.fedora.all.cargo -}}
+cargo install {{.}}
+{{ end -}}
 
 {{- if eq .chezmoi.arch "amd64" }}
 {{range .packages.fedora.amd64.cargo -}}
