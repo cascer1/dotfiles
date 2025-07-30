@@ -2,15 +2,15 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "assignees": ["cascer1"],
     "rebaseWhen": "conflicted",
-  "customManagers": [
-    {
+    "customManagers": [
+      {
         "customType": "regex",
-      "managerFilePatterns": ["^cargo.yaml$"],
-      "matchStrings": [
-        "^(?<depName>\\w+)\\s*:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
-      ],
-      "depNameTemplate": "cargo crate ${depName}",
-      "datasourceTemplate": "crate"
+        "managerFilePatterns": ["cargo.yaml$"],
+        "matchStrings": [
+          "^(?<depName>\\w+)\\s*:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        ],
+        "depNameTemplate": "cargo crate ${depName}",
+        "datasourceTemplate": "crate"
     }
   ]
 }
