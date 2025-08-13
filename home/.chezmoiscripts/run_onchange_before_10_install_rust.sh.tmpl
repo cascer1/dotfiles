@@ -1,0 +1,4 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+curl https://sh.rustup.rs -sSf | sh
+{{- end }}

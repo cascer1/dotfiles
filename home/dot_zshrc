@@ -104,22 +104,16 @@ source $ZSH/oh-my-zsh.sh
 # Enable arrow keys in autocomplete
 zstyle ':completion:*' menu select
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
 # Variables
-export PATH=/home/cas/.local/share/JetBrains/Toolbox/scripts:$PATH
+export PATH=$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH
 
 source ~/.zsh/aliases.sh
 source ~/.zsh/includes.sh
 source ~/.zsh/path.sh
 
-export PATH=/home/cas/bin:$PATH
-export PATH=/home/cas/.local/bin:$PATH
-export PATH=/home/cas/.cargo/bin:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
-PATH="/home/cas/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/cas/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/cas/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/cas/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/cas/perl5"; export PERL_MM_OPT;
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
