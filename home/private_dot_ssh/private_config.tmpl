@@ -3,7 +3,7 @@ CanonicalizeHostname yes
 Include config.d/config_*
 
 {{- if stat (joinPath .chezmoi.homeDir ".ssh/1Password/config") }}
-#Include 1Password/config
+Include 1Password/config
 {{- end }}
 
 Host *
@@ -18,3 +18,5 @@ Host github
 Host github.com
     User git
 
+Host gist.vobar.eu
+    User cas
