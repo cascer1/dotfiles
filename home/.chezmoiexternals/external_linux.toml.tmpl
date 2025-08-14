@@ -37,4 +37,8 @@
     url = "https://github.com/starship/starship/releases/download/{{ .versions.starship}}/starship-{{ eq .chezmoi.arch "amd64" | ternary "x86_64" "aarch64"  }}-unknown-linux-{{ eq .chezmoi.arch "amd64" | ternary "gnu" "musl" }}.tar.gz"
     path = "starship"
 
+[".local/bin/asciinema"]
+    type = "file"
+    url = "https://github.com/asciinema/asciinema/releases/download/{{ .versions.asciinema}}/asciinema-{{ eq .chezmoi.arch "amd64" | ternary "x86_64" "aarch64" }}-unknown-linux-{{ eq .chezmoi.arch "amd64" | ternary "gnu" "musl"}}"
+    executable = true
 {{- end }}
