@@ -1,4 +1,6 @@
-{{- $hosttypeChoices := list "personal" "work" "personal-server" "work-server" -}}
+{{- $hostprofileChoices := list "personal" "work" -}}
+{{- $hosttypeChoices := list "local" "server" -}}
+{{- $hostprofile := promptChoiceOnce . "hostprofile" "What profile do you want to use" $hostprofileChoices -}}
 {{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $hosttypeChoices -}}
 {{- $email := promptStringOnce . "user.email" "What is your email address" -}}
 {{- $gitEmail := promptStringOnce . "user.gitEmail" "What is your Git email address" -}}
@@ -32,3 +34,4 @@
 
 [data]
     hosttype = {{- $hosttype | quote }}
+    hostprofile = {{- $hostprofile | quote }}
