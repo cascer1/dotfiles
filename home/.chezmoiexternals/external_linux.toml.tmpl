@@ -41,4 +41,11 @@
     type = "file"
     url = "https://github.com/asciinema/asciinema/releases/download/{{ .versions.asciinema}}/asciinema-{{ eq .chezmoi.arch "amd64" | ternary "x86_64" "aarch64" }}-unknown-linux-{{ eq .chezmoi.arch "amd64" | ternary "musl" "gnu"}}"
     executable = true
+
+{{- if eq .hosttype "local" }}
+[".local/bin/lazygit"]
+    type = "archive-file"
+    url = "https://github.com/jesseduffield/lazygit/releases/download/v{{ .versions.lazygit }}/lazygit_{{ .versions.lazygit }}_linux_{{ eq .chezmoi.arch "amd64" | ternary "x86_64" "arm64"}}.tar.gz"
+    path = "lazygit"
+{{- end }}
 {{- end }}
