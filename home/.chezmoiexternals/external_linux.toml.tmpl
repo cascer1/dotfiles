@@ -50,7 +50,7 @@
 
 [".local/bin/hugo"]
     type = "archive-file"
-    url = "https://github.com/gohugoio/hugo/releases/download/v{{ .versions.hugo }}/hugo_{{ .versions.hugo }}_linux-{{ eq .chezmoi.arch "amd64" | ternary "amd64" "arm64"}}.tar.gz"
+    url = "https://github.com/gohugoio/hugo/releases/download/v{{ .versions.hugo }}/hugo_extended_{{ .versions.hugo }}_linux-{{ eq .chezmoi.arch "amd64" | ternary "amd64" "arm64"}}.tar.gz"
     path = "hugo"
 {{- end }}
 {{- end }}
