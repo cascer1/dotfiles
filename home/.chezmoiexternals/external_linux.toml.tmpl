@@ -47,5 +47,10 @@
     type = "archive-file"
     url = "https://github.com/jesseduffield/lazygit/releases/download/v{{ .versions.lazygit }}/lazygit_{{ .versions.lazygit }}_linux_{{ eq .chezmoi.arch "amd64" | ternary "x86_64" "arm64"}}.tar.gz"
     path = "lazygit"
+
+[".local/bin/hugo"]
+    type = "archive-file"
+    url = "https://github.com/gohugoio/hugo/releases/download/v{{ .versions.hugo }}/hugo_{{ .versions.hugo }}_linux-{{ eq .chezmoi.arch "amd64" | ternary "amd64" "arm64"}}.tar.gz"
+    path = "hugo"
 {{- end }}
 {{- end }}
