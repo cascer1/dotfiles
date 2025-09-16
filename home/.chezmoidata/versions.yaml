@@ -1,6 +1,6 @@
 versions:
-  eza: v0.23.2            # renovate: datasource=github-releases depName=eza-community/eza
+  eza: v0.23.3            # renovate: datasource=github-releases depName=eza-community/eza
   starship: v1.23.0       # renovate: datasource=github-releases depName=starship/starship
-  asciinema: v3.0.0-rc.5  # renovate: datasource=github-releases depName=asciinema/asciinema
+  asciinema: v3.0.0  # renovate: datasource=github-releases depName=asciinema/asciinema
   lazygit: 0.55.0         # renovate: datasource=github-releases depName=jesseduffield/lazygit
   hugo: 0.150.0           # renovate: datasource=github-releases depName=gohugoio/hugo
