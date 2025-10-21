@@ -3,4 +3,4 @@ versions:
   starship: v1.23.0       # renovate: datasource=github-releases depName=starship/starship
   asciinema: v3.0.0  # renovate: datasource=github-releases depName=asciinema/asciinema
   lazygit: 0.55.1         # renovate: datasource=github-releases depName=jesseduffield/lazygit
-  hugo: 0.151.1           # renovate: datasource=github-releases depName=gohugoio/hugo
+  hugo: 0.152.0           # renovate: datasource=github-releases depName=gohugoio/hugo
