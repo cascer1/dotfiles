@@ -2,6 +2,7 @@ packages:
   fedora:
     all:
       dnf:
+        - 'git'
         - 'bat'
         - 'zsh'
         - 'zoxide'
