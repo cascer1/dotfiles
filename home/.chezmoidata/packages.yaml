@@ -8,6 +8,7 @@ packages:
         - 'gcc cmake make glibc-devel'
         - 'dua-cli'
         - 'duf'
+        - 'docker docker-compose'
       cargo:
     amd64:
       cargo:
