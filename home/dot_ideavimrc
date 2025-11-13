@@ -49,6 +49,7 @@ map <leader>df <action>(ToggleFullScreen)
 
 " File navigation
 map <leader>ff <action>(GotoFile)
+map <leader>fn <action>(GotoClass)
 map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
 map <leader>fa :action GotoAction<CR>
