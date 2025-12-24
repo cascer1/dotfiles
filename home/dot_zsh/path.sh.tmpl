@@ -15,6 +15,12 @@ export FLYCTL_INSTALL="/home/cas/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 {{- end }}
 
+{{- if stat (joinPath .chezmoi.homeDir ".volta") }}
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+{{- end }}
+
+
 {{- if stat (joinPath .chezmoi.homeDir "perl5") }}
 PATH="/home/cas/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/cas/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
