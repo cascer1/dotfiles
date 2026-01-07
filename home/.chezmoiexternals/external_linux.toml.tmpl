@@ -52,5 +52,11 @@
     type = "archive-file"
     url = "https://github.com/gohugoio/hugo/releases/download/v{{ .versions.hugo }}/hugo_extended_{{ .versions.hugo }}_linux-{{ eq .chezmoi.arch "amd64" | ternary "amd64" "arm64"}}.tar.gz"
     path = "hugo"
+
+[".local/bin/woodpecker"]
+    type = "archive-file"
+    url = "https://github.com/woodpecker-ci/woodpecker/releases/download/v{{ .versions.woodpecker }}/woodpecker-cli_linux_{{ eq .chezmoi.arch "amd64" | ternary "amd64" "arm64"}}.tar.gz"
+    path = "woodpecker-cli"
+
 {{- end }}
 {{- end }}
