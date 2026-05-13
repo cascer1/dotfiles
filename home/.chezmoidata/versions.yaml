@@ -4,4 +4,4 @@ versions:
   asciinema: v3.2.0  # renovate: datasource=github-releases depName=asciinema/asciinema
   lazygit: 0.61.1         # renovate: datasource=github-releases depName=jesseduffield/lazygit
   hugo: 0.161.1           # renovate: datasource=github-releases depName=gohugoio/hugo
-  woodpecker: 3.14.0   # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker
+  woodpecker: 3.14.1   # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker
