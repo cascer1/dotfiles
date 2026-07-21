@@ -1,7 +1,7 @@
 versions:
-  eza: v0.23.4            # renovate: datasource=github-releases depName=eza-community/eza
-  starship: v1.25.1       # renovate: datasource=github-releases depName=starship/starship
-  asciinema: v3.2.0  # renovate: datasource=github-releases depName=asciinema/asciinema
-  lazygit: 0.62.2         # renovate: datasource=github-releases depName=jesseduffield/lazygit
-  hugo: 0.163.0           # renovate: datasource=github-releases depName=gohugoio/hugo
-  woodpecker: 3.15.0   # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker
+  eza: v0.23.5            # renovate: datasource=github-releases depName=eza-community/eza
+  starship: v1.26.0       # renovate: datasource=github-releases depName=starship/starship
+  asciinema: v3.2.1  # renovate: datasource=github-releases depName=asciinema/asciinema
+  lazygit: 0.63.1         # renovate: datasource=github-releases depName=jesseduffield/lazygit
+  hugo: 0.164.0           # renovate: datasource=github-releases depName=gohugoio/hugo
+  woodpecker: 3.16.0   # renovate: datasource=github-releases depName=woodpecker-ci/woodpecker
