@@ -4,6 +4,7 @@
 {{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $hosttypeChoices -}}
 {{- $email := promptStringOnce . "user.email" "What is your email address" -}}
 {{- $gitEmail := promptStringOnce . "user.gitEmail" "What is your Git email address" -}}
+{{- $gitName := promptStringOnce . "user.gitName" "What is your Git commit name" -}}
 {{- $signingKey := promptStringOnce . "user.signingKey" "What is your Git signing key" -}}
 {{- $chassisType := "desktop" }}
 {{- if eq .chezmoi.os "linux" }}
@@ -22,7 +23,7 @@
     email = {{ $email | quote }}
     gitEmail = {{ $gitEmail | quote }}
     signingKey = {{ $signingKey | quote }}
-    name = "Cas Eliëns"
+    name = {{ $gitName | quote }}
 
 [data.system]
     chassisType = {{- $chassisType | quote }}
